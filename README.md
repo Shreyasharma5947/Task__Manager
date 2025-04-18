@@ -41,6 +41,8 @@ Before you begin, make sure you have the following installed on your machine:
 - [Git](https://git-scm.com/)
 
 ---
+# Vercel Frontend Deployment
+Project is deployed in vercel https://task-manager-fawn-two.vercel.app/auth 
 
 ## 📦 Installation
 
