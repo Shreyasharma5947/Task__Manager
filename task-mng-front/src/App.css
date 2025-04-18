@@ -1,0 +1,470 @@
+/* Login.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+.login-container,
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  padding: 1rem;
+}
+
+.login-form,
+.register-form,
+.task-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form:hover,
+.register-form:hover,
+.task-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.login-title,
+.register-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button,
+.register-button,
+.task-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover,
+.register-button:hover,
+.task-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.login-button:active,
+.register-button:active,
+.task-button:active {
+  transform: translateY(0);
+}
+
+.filter-container {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-group {
+  flex: 1;
+}
+
+.task-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.task-list-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.no-tasks-message {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-item {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.task-details {
+  flex: 1;
+}
+
+.task-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.task-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.task-meta {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggle-status-button {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-completed {
+  background-color: #22c55e; /* Green for "Mark Completed" */
+}
+
+.toggle-pending {
+  background-color: #eab308; /* Yellow for "Mark Pending" */
+}
+
+.toggle-status-button:hover {
+  filter: brightness(90%);
+  transform: translateY(-2px);
+}
+
+.toggle-status-button:active {
+  transform: translateY(0);
+}
+
+.edit-button {
+  padding: 0.5rem 0.75rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.edit-button:active {
+  transform: translateY(0);
+}
+
+.delete-button {
+  padding: 0.5rem 0.75rem;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.delete-button:active {
+  transform: translateY(0);
+}
+
+.dashboard {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.dashboard-card {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.total-tasks {
+  background-color: #dbeafe; /* Blue-100 equivalent */
+}
+
+.pending-tasks {
+  background-color: #fef9c3; /* Yellow-100 equivalent */
+}
+
+.completed-tasks {
+  background-color: #dcfce7; /* Green-100 equivalent */
+}
+
+.dashboard-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dashboard-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (min-width: 768px) {
+  .filter-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form,
+  .register-form,
+  .task-form {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .login-title,
+  .register-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select,
+  .login-button,
+  .register-button,
+  .task-button,
+  .toggle-status-button,
+  .edit-button,
+  .delete-button,
+  .logout-button {
+    font-size: 0.875rem;
+  }
+
+  .filter-container {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .task-list-container {
+    padding: 0.5rem;
+    max-width: 90%;
+  }
+
+  .task-list-title {
+    font-size: 1.5rem;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .app-container {
+    padding: 0.5rem;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+  }
+
+  .dashboard {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .dashboard-title {
+    font-size: 1.125rem;
+  }
+
+  .dashboard-card-title {
+    font-size: 1rem;
+  }
+
+  .dashboard-card-value {
+    font-size: 1.25rem;
+  }
+}
